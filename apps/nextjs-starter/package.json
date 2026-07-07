@@ -38,7 +38,7 @@
     "stats-gl": "^4.1.0",
     "styled-components": "^6.4.3",
     "tempus": "1.0.0-dev.17",
-    "three": "0.184.0",
+    "three": "0.185.1",
     "tunnel-rat": "^0.1.2",
     "zod": "^4.4.3",
     "zustand": "^5.0.14"
