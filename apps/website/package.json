@@ -16,7 +16,7 @@
     "@atlas/shared": "workspace:*",
     "@atlas/theme-engine": "workspace:*",
     "@atlas/ui": "workspace:*",
-    "next": "16.2.7",
+    "next": "16.2.10",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "styled-components": "^6.4.3",
