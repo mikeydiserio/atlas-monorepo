@@ -1,0 +1,51 @@
+/**
+ * Atlas layout engine — structural stylesheet.
+ *
+ * STRUCTURE ONLY: grid arrangement and responsive stacking. No colours, no
+ * typography, no theme values — presentation belongs to the theme engine.
+ * Consumers (apps/website, the editor preview) import this file once.
+ *
+ * Layout render functions set the data attributes and CSS custom properties;
+ * media queries here honour the layout's declared `stackBelow` behaviour.
+ */
+
+[data-atlas-layout] {
+  display: grid;
+  grid-template-columns: var(--atlas-cols, 1fr);
+  gap: var(--atlas-gap, 1.5rem);
+}
+
+/* Regions must be able to shrink inside a grid track. */
+[data-atlas-region] {
+  min-width: 0;
+}
+
+/* Responsive stacking, driven by layout metadata (responsive.stackBelow). */
+@media (max-width: 640px) {
+  [data-atlas-stack='sm'] {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  [data-atlas-stack='md'] {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  [data-atlas-stack='lg'] {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Carousel: horizontal scroll-snap track; slides sized by --atlas-slide. */
+[data-atlas-layout='carousel'] > [data-atlas-region] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--atlas-slide, 80%);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: var(--atlas-gap, 1.5rem);
+}
+[data-atlas-layout='carousel'] > [data-atlas-region] > * {
+  scroll-snap-align: start;
+}

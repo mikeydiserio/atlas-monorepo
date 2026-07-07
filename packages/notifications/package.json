@@ -1,0 +1,16 @@
+{
+  "name": "@atlas/notifications",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Event bus and notification dispatch. Communications are event-driven.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@atlas/shared": "workspace:*",
+    "zod": "^4.4.3"
+  }
+}

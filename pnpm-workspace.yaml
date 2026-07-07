@@ -1,0 +1,12 @@
+# Atlas monorepo workspaces (see docs/atlas/01-architecture.md §3).
+# The original Satūs root app lives on as apps/nextjs-starter.
+packages:
+  - 'packages/*'
+  - 'apps/*'
+
+# Dependencies allowed to run install/postinstall build scripts (pnpm >= 10.26).
+allowBuilds:
+  esbuild: true
+  lefthook: true
+  nx: true
+  sharp: true

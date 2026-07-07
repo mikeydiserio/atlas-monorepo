@@ -1,0 +1,22 @@
+{
+  "name": "@atlas/component-registry",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Central component registry, discovery, and schema-driven field metadata.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@atlas/shared": "workspace:*",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.17"
+  }
+}

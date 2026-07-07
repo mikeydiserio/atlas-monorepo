@@ -1,0 +1,15 @@
+{
+  "name": "@atlas/booking",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Bookings domain: services, staff, availability, recurring schedules, reservations.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "dependencies": {
+    "@atlas/shared": "workspace:*"
+  }
+}

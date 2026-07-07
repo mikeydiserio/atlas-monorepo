@@ -1,0 +1,21 @@
+{
+  "name": "@atlas/atlas",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "nx run-many -t dev",
+    "dev:dashboard": "nx dev @atlas/dashboard",
+    "dev:website": "nx dev @atlas/website",
+    "build": "nx run-many -t build",
+    "typecheck": "nx run-many -t typecheck",
+    "affected": "nx affected -t typecheck build",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "nx": "23.0.1"
+  }
+}

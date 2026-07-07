@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+./node_modules/
+*/node_modules/
+./node_modules/*
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Build outputs
+dist/
+build/
+storybook-static/
+
+# Nx
+.nx/cache
+.nx/workspace-data
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Supabase local dev
+supabase/.temp/
+supabase/.branches/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel

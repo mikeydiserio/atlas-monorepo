@@ -1,0 +1,39 @@
+name: CI
+permissions:
+  contents: read
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Full history so `nx affected` can diff against the base branch.
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      # Reads the pinned version from the root package.json "packageManager" field.
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Derives base/head SHAs for `nx affected` (last successful run on main).
+      - uses: nrwl/nx-set-shas@v4
+
+      - name: Typecheck affected
+        run: pnpm nx affected -t typecheck
+
+      - name: Build affected
+        run: pnpm nx affected -t build
