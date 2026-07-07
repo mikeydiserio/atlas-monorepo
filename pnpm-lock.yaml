@@ -203,8 +203,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       deslop-cli:
-        specifier: 0.0.17
-        version: 0.0.17
+        specifier: 0.7.1
+        version: 0.7.1
       happy-dom:
         specifier: ^20.10.2
         version: 20.10.6
@@ -1170,6 +1170,9 @@ packages:
 
   '@codemirror/state@6.7.0':
     resolution: {integrity: sha512-Zbl9NyscLMZkfXPQnNAIIAFftidrA1UbcJEIMp24C0Bukc2I5T8wJS0wsXYsnDOqCFJUeJ1BITGNs5CqPDSmSg==}
+
+  '@codemirror/state@6.7.1':
+    resolution: {integrity: sha512-9QzNDgE4EYDnAHfrTlR2lwiPciiOymLtwKK+8yHQzCc7GXhAP9xdEbEJFy2IWB1j9UGUl9BsgMmTo/ImA02T7A==}
 
   '@codemirror/theme-one-dark@6.1.3':
     resolution: {integrity: sha512-NzBdIvEJmx6fjeremiGp3t/okrLPYT0d9orIc7AFun8oZcRk58aejkqhv6spnz4MLAevrKNPMQYXEWMg4s+sKA==}
@@ -5105,13 +5108,10 @@ packages:
     resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
     engines: {node: '>=6'}
 
-  deslop-cli@0.0.17:
-    resolution: {integrity: sha512-04DjHZCxH1MAu2mAwjOHlq5YzakoN07McNfxeRxHKDVD0lcmpONawPbd/E42H+sEBl6w66dxiPYnjjDtwerrLg==}
+  deslop-cli@0.7.1:
+    resolution: {integrity: sha512-sS5jlrBHxLIbu8BQ2UqIL1jmlyPb6u+99pnqR0mI9PmZPdYqtqJMyOG6Z8MS1QomzEm9EP8D4KQ0YLz/gzYLXQ==}
     engines: {node: '>=22'}
     hasBin: true
-
-  deslop-js@0.0.17:
-    resolution: {integrity: sha512-iO7S+ZhOPCv5UW6DPo4Rom9jx+86VDoNCuYfosepzz27dmkOuHR9obj0LpgS8QCpY/mjxrRYvQQcEhygjwwQEA==}
 
   deslop-js@0.7.1:
     resolution: {integrity: sha512-HsEoRI/bzuD0o2OVczYz42SXTCl5of3ax6eiojZbC/7gJsPNxxjPRvBysP88LXsHujYrIGJnGtFRnHwCmKWuxQ==}
@@ -9205,10 +9205,14 @@ snapshots:
     dependencies:
       '@marijn/find-cluster-break': 1.0.3
 
+  '@codemirror/state@6.7.1':
+    dependencies:
+      '@marijn/find-cluster-break': 1.0.3
+
   '@codemirror/theme-one-dark@6.1.3':
     dependencies:
       '@codemirror/language': 6.12.4
-      '@codemirror/state': 6.7.0
+      '@codemirror/state': 6.7.1
       '@codemirror/view': 6.43.5
       '@lezer/highlight': 1.2.3
 
@@ -12813,7 +12817,7 @@ snapshots:
       '@codemirror/language': 6.12.4
       '@codemirror/lint': 6.9.7
       '@codemirror/search': 6.7.1
-      '@codemirror/state': 6.7.0
+      '@codemirror/state': 6.7.1
       '@codemirror/view': 6.43.5
 
   color-convert@2.0.1:
@@ -13030,19 +13034,10 @@ snapshots:
 
   dequal@2.0.3: {}
 
-  deslop-cli@0.0.17:
+  deslop-cli@0.7.1:
     dependencies:
       commander: 14.0.3
-      deslop-js: 0.0.17
-
-  deslop-js@0.0.17:
-    dependencies:
-      '@oxc-project/types': 0.132.0
-      fast-glob: 3.3.3
-      minimatch: 10.2.5
-      oxc-parser: 0.132.0
-      oxc-resolver: 11.23.0
-      typescript: 6.0.3
+      deslop-js: 0.7.1
 
   deslop-js@0.7.1:
     dependencies:
