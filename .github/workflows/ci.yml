@@ -30,7 +30,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       # Derives base/head SHAs for `nx affected` (last successful run on main).
-      - uses: nrwl/nx-set-shas@v4
+      - uses: nrwl/nx-set-shas@v5
 
       - name: Typecheck affected
         run: pnpm nx affected -t typecheck
